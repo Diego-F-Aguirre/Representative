@@ -20,8 +20,8 @@ struct Representative {
     static let kLink = "link"
     static let kResults = "results"
     
-    var name: String = ""
-    var party: String = ""
+    var name: String?
+    var party: String?
     var state: String = ""
     var district: String = ""
     var phone: String = ""
@@ -30,8 +30,8 @@ struct Representative {
     
     init(jsonDictionary: [String : String]) {
         
-        self.name = jsonDictionary[Representative.kName] ?? ""
-        self.party = jsonDictionary[Representative.kParty] ?? ""
+        self.name = jsonDictionary[Representative.kName]
+        self.party = jsonDictionary[Representative.kParty]
         self.state = jsonDictionary[Representative.kState] ?? ""
         self.district = jsonDictionary[Representative.kDistrict] ?? ""
         self.phone = jsonDictionary[Representative.kPhone] ?? ""
